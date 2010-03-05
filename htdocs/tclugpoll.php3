@@ -82,8 +82,7 @@ if ($action == "vote") {
         include($HeaderFile);
         GetResults($PollQuestion, $PollNumbers, $PollQuestions, $PollVotes);
         include($FooterFile);
-    }
-    else {
+    } else {
             if ($PollWarnCheaters == 1) {
             include($HeaderFile);
                 echo "You have already voted!";
@@ -95,13 +94,15 @@ if ($action == "vote") {
             include($FooterFile);
         }
     }
-}
-elseif ($action == "viewresults") {
+} elseif ($action == "viewresults") {
     include($HeaderFile);
     GetResults($PollQuestion, $PollNumbers, $PollQuestions, $PollVotes);
     include($FooterFile);
-}
-else {
+} elseif ($showresults == 1) {
+    include($HeaderFile);
+    GetResults($PollQuestion, $PollNumbers, $PollQuestions, $PollVotes);
+    include($FooterFile);
+} else {
 include($HeaderFile);
     echo "$PollQuestion\n"; ?>
     <p>
@@ -120,7 +121,7 @@ include($HeaderFile);
     <table align=center border=0>
     <tr>
     	<td><input type="submit" value="Vote"></td></form>
-    	<td><form action="index.php3" method="post"><input type="hidden" name="action" value="viewresults"><input type="submit" value="Results"></td></form>
+    	<td><A HREF="/index.php3?action=viewresults">View Results</A></td>
     </tr>
     </table>
 <?
