@@ -18,25 +18,6 @@ include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
       <td align="left"><div class="header" align="center">
 <font size=+2>Latest News</font></div>
 <P>
-<?
-
-include ("../../include/wwwmnlinuxorg.inc");
-tclug_db_connect () or exit;
-
-$sql = "SELECT *,UNIX_TIMESTAMP(date) from news order by date desc";
-$result = mysql_query($sql);
-$numrows = mysql_numrows($result);
-
-print "<UL>";
-while ($row=mysql_fetch_array($result)) {
-                $stringdate = date("l, F d, Y",$row[3]);
-                print "<LI><B>$stringdate</B>\n";
-                print "<blockquote>";
-		print "$row[news]\n";
-		print "</blockquote>";
-}
-print "</UL>";
-?>
 
 </td>
 </tr>
