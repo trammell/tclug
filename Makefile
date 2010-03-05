@@ -16,6 +16,6 @@ restart graceful:
 	$(APACHECTL) -d $(PWD) -f $(CONF) -k graceful
 
 test:
-	ack --literal '<?'
-
+	ack --literal '<?' htdocs/
+	ack --literal 'FIXME' htdocs/
 
