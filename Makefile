@@ -1,17 +1,17 @@
 
-  HTTPD := /usr/sbin/httpd2-prefork
-    PWD := $(shell pwd)
-    PID := $(shell cat logs/httpd.pid)
+  APACHECTL := /usr/sbin/apache2ctl
+        PWD := $(shell pwd)
+       CONF := $(PWD)/conf/httpd.conf
 
 clean:
-	rm -f logs/error_log logs/access_log
+	rm -f logs/*_log
 
 start:
-	$(HTTPD) -d $(PWD) -f conf/httpd.conf -e info
+	$(APACHECTL) -d $(PWD) -f $(CONF) -k start
 
 stop:
-	-kill $(PID)
+	$(APACHECTL) -d $(PWD) -f $(CONF) -k stop
 
-restart:
-	make stop start
+restart graceful:
+	$(APACHECTL) -d $(PWD) -f $(CONF) -k graceful
 
