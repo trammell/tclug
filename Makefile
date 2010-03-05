@@ -15,3 +15,7 @@ stop:
 restart graceful:
 	$(APACHECTL) -d $(PWD) -f $(CONF) -k graceful
 
+test:
+	ack --literal '<?'
+
+
