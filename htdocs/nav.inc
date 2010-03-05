@@ -33,8 +33,6 @@
 <a href="/search/">Search</a><BR>
 </TD></TR><TR><TD align=right>
 <BR>
-<?php require '/usr/httpd/virtual/www.mn-linux.org/html/sympoll/booth.php';
-                newest_booth(); ?>
 
 <P>
 <A HREF="http://www.real-time.com"><IMG SRC="/images/real-time.gif" BORDER=0></A>
