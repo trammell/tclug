@@ -1,6 +1,6 @@
-<?
+<?php
 $title="TCLUG - Twin Cities Linux Users Group";
-include("header.inc");
+include "lib/header.inc";
 ?>
 <table border="0" cellpadding="0" cellspacing="0" width="90%">
 <tr>
@@ -46,13 +46,13 @@ welcome, and we hope to show you how enjoyable Linux can be.  :-)</p>
 </table></td>
 </tr>
 </table>
-<? include("footer.inc") ?>
+<?php include "lib/footer.inc" ?>
 </td>
         <td width="151" align="right" valign="top">
 <table border="0" cellpadding="0" cellspacing="0" width="140">
 <tr>
         <td align="right"><br>
-<? include("links.inc") ?>
+<?php include "lib/nav.inc" ?>
 </td>
 </tr>
 </table>
