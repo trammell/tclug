@@ -1,21 +1,17 @@
-<?
+<?php
 $title="TCLUG - Twin Cities Linux Users Group";
-include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
+include "../lib/header.inc";
+include "../lib/logo.inc";
 ?>
-<table border="0" cellpadding="0" cellspacing="0" width="751">
-<tr>
-        <td><img src="/images/tclugminn.jpg" width=500 height=150 border=0 alt="Twin Cities Linux Users Group - Minneapolis, Minnesota"></td>
-</tr>
-</table>
 <table border="0" cellpadding="5" cellspacing="0" width="95%">
 <tr>
-        <td width="95%">
+<td width="95%">
 <table width=95% border="0" align="center" cellspacing="0" cellpadding="1">
 <tr>
-  <td bgcolor="#000000" align="center">
+<td bgcolor="#000000" align="center">
 <table width=100% cellspacing=0 cellpadding=20 border=0 bgcolor="ivory">
 <tr>
-      <td align="left"><div class="header" align="center">
+<td align="left"><div class="header" align="center">
 <font size=+2>Latest News</font></div>
 <P>
 
@@ -25,18 +21,17 @@ include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
 </tr>
 </table>
 
-<? include("../footer.inc") ?>
-
+<?php include "../lib/footer.inc"  ?>
 
 </td>
-        <td width="151" align="right" valign="top">
+<td width="151" align="right" valign="top">
 <table border="0" cellpadding="0" cellspacing="0" width="140">
 <tr>
-        <td align="right"><br>
-<? include("../links.inc") ?>
+<td align="right"><br>
+<?php include "../lib/nav.inc" ?>
 </td>
 </tr>
-</table>        
+</table>
 </td>
 </tr>
 </table>
