@@ -1,6 +1,6 @@
-<? 
+<?
 $title="TCLUG - Twin Cities Linux Users Group";
-include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
+include("header.inc");
 ?>
 <table border="0" cellpadding="0" cellspacing="0" width="90%">
 <tr>
@@ -20,26 +20,12 @@ include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
       <td align="left"><div class="header" align="center">
 <font size=+2>Welcome to TCLUG!</font></div>
 <HR>
-<B><A HREF="/news">Latest News:</A></B><BR>
-<?
-include ("../include/wwwmnlinuxorg.inc");
-tclug_db_connect () or exit;
-include("latestnews.inc");
-?>
-
-<HR>
-<table><tr><td width=75%>
-<B>Random TCLUG Member Site Link:</B><BR>
-<? include("randomtclugsite.inc") ?>
-</td><td>
-<a href="http://www.cafeshops.com/tclug"><img src="/images/tclugstore.gif" border=0></a>
-</td></tr></table>
 <HR>
 <P>The <B>Twin Cities Linux Users Group</b> is a group of
  <A HREF="http://www.linux.org">Linux</A> users in the Minneapolis, MN area.
 If you are curious about Linux, or looking for technical answers, we
-encourage you to join us.  If you're not in the local Twin Cities area, there 
-may be a LUG in your area.  Check our list of <a href="/othergroups/">other groups 
+encourage you to join us.  If you're not in the local Twin Cities area, there
+may be a LUG in your area.  Check our list of <a href="/othergroups/">other groups
 </a> to see if there's one in your area.</p>
 
 The <B>TCLUG</B> holds monthly meetings in which we discuss various topics related to Linux. This gives our members a chance to interact with one another while learning about Linux.
@@ -69,7 +55,7 @@ welcome, and we hope to show you how enjoyable Linux can be.  :-)</p>
 <? include("links.inc") ?>
 </td>
 </tr>
-</table>        
+</table>
 </td>
 </tr>
 </table>
