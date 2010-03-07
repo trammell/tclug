@@ -1,0 +1,128 @@
+Mike's Classifieds
+Version 1.1
+--------------------------------------
+mike@mikespice.com
+
+SUMMARY
+---------------------------------------------
+This is a free classifieds script to use on small to medium sites.
+If you really would like to host a MAJOR classifieds site with 100,000 ads,
+you need to pay me to write an SQL database version :)
+
+
+DISTRIBUTION / LICENSE
+-------------------------------------------------
+This software is free to use and distribute.  You
+may also make any changes that you want and distribute
+it also.  The only thing that I ask is that you leave
+the "provided by MikeSpice.com" with the link to 
+my site www.mikespice.com in the generated HTML.
+If you make changes, you may change it to something
+like "provided by a MODIFIED script from mikespice.com"
+or something of that nature.  The script is FREE, please
+help me out!  Also, please email me if you use my 
+script (just for kicks so I can see my stuff doing
+good for people).
+
+INSTALATION
+--------------------------------------
+
+Make sure that scripts that you run are run as you.  Some 
+servers run CGI scripts as user "nobody".  This will NOT give you enough permissions
+to modify the .dat files that this script creates.  The other option is to make 
+the directory containing classifieds.cgi writable to all, this is a BAD idea
+because it presents a security risk.  Check with your provider to make sure that
+the scripts are run as YOU.
+
+1. place the classifieds.cgi and sitevariables.pl in a folder under 
+your cgi-bin along with any of the other files if you wish.
+e.g. - cgi-bin/classifieds
+
+2. switch to the folder where you put classifieds.cgi and 
+chmod 755 classifieds.cgi
+
+3. edit the sitevariables.pl to fit your needs (this way when new
+versions come out, you can just replace the classifieds.cgi and
+do not have to re-edit anything specific to your site). Unfortunatly
+when going from version 1.0 to 1.1 you cannot just use your old one
+due to the fact that there are two new variables.
+
+4. place any pictures that you wish to use for your catagory
+headings under a directory where your html files are stored
+e.g. - www/classifieds/
+Make sure that your sitevariables.pl file points to this (step 3)
+
+4. there may be other permissions to set let me know if you have troubles
+
+5. now just point your browser at
+http://yourdomain/cgi-bin/classifieds/classifieds.cgi
+or whereever you put it!
+
+Good Liuck!  Email me if you use it!
+
+FAQ
+-------------------------------------
+Q: The script only reads in the first or none of the catagories in my .dat file
+A: This is probably due to the file locking call flock on WindowsNT servers.
+Try commenting out all the lines that contain flock(anything) with a # at the 
+begining of the line.
+
+Q: The script complains that I do not have permissions to do such and such.
+A: Make sure that scripts that you run are run as you.  Some 
+servers run CGI scripts as user "nobody".  This will NOT give you enough permissions
+to modify the .dat files that this script creates.  The other option is to make 
+the directory containing classifieds.cgi writable to all, this is a BAD idea
+because it presents a security risk.  Check with your provider to make sure that
+the scripts are run as YOU.
+
+Q: I get errors when I enable email
+A: This may only work on UNIX/Linux servers (maybe not NT) or 
+the path to sendmail may be incorrect.
+Look at the mailme subroutine.  If you understand how it works,
+you may need to just edit the path to sendmail.  I have no idea 
+how it is done on a WinNT server.
+
+CHANGES
+-------------------------------------------------------
+3.21.2000 added logging capabilites
+4.6.2000 added email to user and to webmaster capabilities and also made adds expire
+4.7.2000 added email link to preview and add pages. Fixed line breaks in emails. 
+       Added file locking
+	  to prevent multiply access to the same file by different users.
+5.05.2000 fixed bug where the script would break if user did not enter an email 
+         and emailing was turned on
+Mon Jun 12 10:03:33 PM EDT 2000 added error checking to check for bad 
+        people not filling in the form right
+Wed Jun 14 09:45:08 PM EDT 2000 made catagories editable from @catagories 
+       array instead of from a file
+Thu Jul 13 03:54:24 PM EDT 2000 fixed problem when placing an ad when reading
+		in categories
+Mon Jul 31 12:10:13 AM EDT 2000 Added picture URL when placing and viewing ads.
+		Added section for users to delete their ad with the password emailed/displayed when
+		they place the ad. Added capability to edit ads also.  This is done
+ 		by first deleting the old ad, then placing a new one.
+Sun Aug 06 Changed version to 1.0  I did this because I think it has all
+		of the features necessary to serve most peoples purposes
+11.26.2000
+	Fixed the bug causing every add to be repeated when a user
+	updates an ad.
+	Added 2 variables.  $checkphonenumber allows webmaster to specify
+	whether to check for a valid phone number or not.  $allowpictureurls
+	allows webmasters to specify whether to allow users to post picutre
+	URLs.
+	Do some checking to strip out malicious bad HTMl. Please do NOT
+	test this on my server :-)  Do this on your server if you must
+	test it.
+
+TODO
+--------------------------------------
+I need to do/need help with the following items
+
+1. Anything else you want me to add..just email me.
+
+
+Send questions or comments to mike@mikespice.com  
+
+Thanks,
+Mike Spice
+
