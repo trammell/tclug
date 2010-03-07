@@ -4,17 +4,6 @@ include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
 ?>
 
 
-<?
-$db = mysql_connect ("mysql2.real-time.com", "cfandre", "web");
-mysql_select_db("wwwmnlinuxorg",$db);
-$sql = "select * from meeting";
-$result = mysql_query($sql, $db);
-$numrows = mysql_numrows($result);
-$row = mysql_fetch_row ($result);
-$date = $row[0];
-$topic = $row[1];
-$location = $row[2];
-?>
 
 <table border="0" cellpadding="0" cellspacing="0" width="751">
 <tr>
