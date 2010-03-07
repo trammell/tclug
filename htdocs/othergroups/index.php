@@ -69,14 +69,6 @@ leftmargin="0">
 <H4><A HREF="http://www.linux.org/users/index.html/">Linux Online - LUGS around the world</A></H4>
 </UL>
 
-<UL>
-<LI>                                                                                                        <H4><A HREF="http://noframes.linuxjournal.com:8080/glue/">GLUE: Groups of Linux Users Everywhere</A></H4>
-</UL>
-
-<UL>
-<LI>                                                                                                        <H4><A HREF="http://lugww.counter.li.org/lugww.php3">Linux Users Groups WorldWide</A></H4>
-</UL>
-
 
 <HR>
 <font size=+2>Other Minnesota Groups</font></div>
