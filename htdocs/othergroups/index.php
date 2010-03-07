@@ -103,12 +103,6 @@ leftmargin="0">
 
 <UL>
 <LI>
-<H4><A HREF="http://www.intertech-inc.com/userGroup/javaUserGroup.asp">
-Twin Cities Java Users Group</A></H4>
-</UL>
-
-<UL>
-<LI>
 <H4><A HREF="http://www.uum.org/">UNIX Users of Minnesota</A></H4>
 </UL>
 
