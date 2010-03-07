@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+<title>Slide 23</title>
+</head>
+<body>
+<center>
+<a href="text0.htm">First page</a> <a href="text21.htm">Back</a> <a href="text23.htm">Continue</a> <a href="text23.htm">Last page</a> <a href="dns.htm">Overview</a> <a href="img22.htm">Graphics</a></center><br>
+<h1>Dual nameserver setup</h1><p>
+<ul><li><h2>Set the external one up to be as restrictive as possible.  Two config files. </h2>
+<li><h2>Set the internal one as a caching-only nameserver</h2>
+<ul><li>Default configuration, usually.
+</ul><li><h2>Set them up to only work on certain interfaces.</h2>
+<ul><li>listen-on in options
+<li>listen-on { &lt;ip-address&gt;; &lt;another ip address&gt;;};
+</ul><li><h2>Then start up named, but with different conf files</h2>
+<ul><li>named -c conf-file
+</ul></ul></body>
+</html>

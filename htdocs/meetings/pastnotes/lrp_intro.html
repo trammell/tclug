@@ -1,0 +1,329 @@
+<html>
+<head>
+<title>Linux Router Project (LRP) - An Introduction</title>
+</head>
+<body>
+
+Presented 12/04/1999
+<h1><br>
+Linux Router Project (LRP) - An Introduction
+</h1>
+<p>
+The Linux Router Project (LRP) is: 
+<b>"A networking-centric micro-distribution of Linux."</b>
+
+<h2><br>
+Feature List:
+</h2>
+<ul>
+<li>Able to fit on, and boot from, a single floppy diskette.
+<li>Runs solid state in RAM memory. - no file system to corrupt.
+<li>Flexible - run any combination of router, firewall, switch, etc.
+<li>Secure - small and light, less to worry about, less to break, ssh support.
+<li>IP control - IP masquerade (NAT), port redirection, load balancing, etc.
+<li>Traffic monitoring & advanced routing capabilities.
+<li>Supports multiple interfaces & multiple protocols.
+<li>POSIX feel - works like a full unix system
+<li>Open hardware - uses standard modular PC components.
+<li>Free and open - complete source code available.
+</ul>
+
+<h2><br>
+Hardware Recommendations:
+</h2>
+<ul>
+<li>10 Mbps ethernet router - 486, 1.44 floppy, 12 MB RAM, NICs
+<li>10/100 Mbps router/switch - P100+, 1.44 floppy, 16 MB RAM, 10/100 PCI NICs
+<li>RADIUS PPP/SLIP RAS - P100+, LS-120 or Zip drive, 32+ MB RAM, 10/100 PCI NIC, serial port boards
+<li>DS1 WAN router - P166+, LS-120 or Zip drive, 64+ MB RAM, 10/100 PCI NICs, etc.
+<li>Many other hardware/software configurations are possible
+</ul>
+
+<h2><br>
+LRP Deep Dark Secrets
+</h2>
+The Linux Router Project is an efficient, elegant tool for building routers,
+firewalls, and similar devices.  However, some vital information regarding
+the LRP may not be readily apparent...
+<ul>
+<li>The main LRP web page at http://www.linuxrouter.com/ has not been actively
+maintained for the last six months.  Current LRP information is available from
+<a href="http://lrp.c0wz.com/">http://lrp.c0wz.com/</a>.
+<li>LRP 2.9.4, the current stable linux router project release, uses linux
+kernel version 2.0.36.  However, Matthew Grant has created a variation of LRP
+2.9.4, called Kilimanjaro, that uses linux kernel version 2.2.11 (and, of
+course, ipchains, etc.)
+<li>Binary kernel modules for use with LRP 2.9.4 are available from
+<a href="http://www.linuxrouter.org/modmaker/">Modmaker</a> or 
+<a href="ftp://sunsite.unc.edu/pub/Linux/distributions/linux-router/dists/2.9.4/kernel/2.0.36pre15-1.tar.gz">2.0.36pre15-1.tar.gz</a>.
+Binary kernel modules for Kilimanjaro are available from 
+<a href="ftp://ftphost.manawatu.gen.nz/pub/linux/linux-router/linux-2.2-LRP_2.9.4/kernel/2.2.11-1.tar.gz">2.2.11-1.tar.gz</a>.
+<li>The LRP mailing list 
+<a href="http://www.linuxrouter.org/listarch/linux-router/">archives</a>
+are a valuable problem-solving resource.
+</ul>
+
+<h2><br>
+A Comparison of LRP 2.9.4 and Kilimanjaro
+</h2>
+<table border=1 cellpadding=2>
+<tr>
+ <td>&nbsp;
+ <td><h2>LRP 2.9.4</h2>
+ <td><h2>Kilimanjaro</h2>
+<tr valign=top>
+ <td><b>Description</b>
+ <td>latest stable version of linux router project
+ <td>LRP 2.9.4, tweaked to use linux kernel version 2.2.x
+<tr valign=top>
+ <td><b>Release Date</b>
+ <td>May 29, 1999
+ <td>Sep 1, 1999
+<tr valign=top>
+ <td><b>Linux Kernel Version</b>
+ <td>2.0.36
+ <td>2.2.11
+<tr valign=top>
+ <td><b>Networking Configuration Tools &amp; Commands</b>
+ <td>ifconfig, route, ipfwadm, ipportfw, ...
+ <td>ip, ipchains, ipmasqadm, ...
+<tr valign=top>
+ <td><b>Binary Diskette Images</b>
+ <td>idiot-image_1440KB_2.9.4
+ <td>1440-basic.floppy
+  <br>1440-eth_PPP.floppy
+  <br>1743-basic.floppy
+  <br>1743-eth_PPP.floppy
+  <br>1743-eth_PPP_QoS.floppy
+<tr valign=top>
+ <td><b>Binary Kernel Modules</b>
+ <td>Modmaker tool on web site
+  <br>2.0.36pre15-1.tar.gz
+ <td>2.2.11-1.tar.gz
+<tr valign=top>
+ <td><b>Packages Provided</b>
+ <td>bind.lrp, boa.lrp, dhcp.lrp, dhttpd.lrp, gated.lrp, ppp.lrp, proftpd.lrp,
+  pslave.lrp, snmp.lrp, sshd.lrp, thttpd.lrp, wanpipe.lrp, xserver.lrp
+ <td>bwidth22.lrp, ftpbkup.lrp, gated22.lrp, gated22o.lrp, gated22r.lrp,
+  mgetty.lrp, minicom.lrp, netacct.lrp, pmap22.lrp, ppp22.lrp, snmp.lrp,
+  wnpipe22.lrp
+  <br>(in addition, most LRP 2.9.4 packages will also work with Kilimanjaro)
+<tr valign=top>
+ <td><b>Source Code</b>
+ <td>2.9.4-sourcesnapshot.tar.gz (27 meg)
+ <td>linux-2.2-LRP_2.9.4.source.tar.gz (51 meg)
+<tr valign=top>
+ <td><b>Documentation</b>
+ <td>web site provides basic documentation, LRP-FAQ, LRP-Package-HOWTO,
+  information about booting higher density formatted disks, and access to
+  the LRP mailing list archives
+ <td>release announcement (buried in LRP mailing list archives), README files,
+  individual documentation for some packages
+<tr valign=top>
+ <td><b>Available From</b>
+ <td>main LRP site & mirrors
+ <td>sites in New Zealand and USA
+</table>
+
+<h2><br>
+LRP Theory of Operation and Diskette Structure
+</h2>
+<a href="http://www.linuxrouter.org/docs.shtml">http://www.linuxrouter.org/docs.shtml</a>
+<br>
+
+<h2><br>
+LRP Packages &amp; Addons
+</h2>
+<a href="http://www.linuxrouter.org/LRP-Package-HOWTO.shtml">http://www.linuxrouter.org/LRP-Package-HOWTO.shtml</a>
+<br>
+
+<h2><br>
+Booting Linux with higher density floppy disks
+</h2>
+<a href="http://www.linuxrouter.org/floppy.shtml">http://www.linuxrouter.org/floppy.shtml</a>
+<br>
+
+<h2><br>
+Adding Kernel Modules to an LRP Diskette
+</h2>
+<a href="http://lrp.c0wz.com/dox/module.txt">http://lrp.c0wz.com/dox/module.txt</a>
+<br>
+
+<h2><br>
+Procedure for Building an LRP Firewall
+</h2>
+<a href="http://www.geocities.com/Athens/Ithaca/9660/lrphowto.html">http://www.geocities.com/Athens/Ithaca/9660/lrphowto.html</a>
+<br>
+
+<h2><br>
+LRP Special Commands
+</h2>
+<ul>
+<li>ae - text editor
+<li>lrcfg - menu system
+</ul>
+
+<h2><br>
+One TCLUGer's Story (autobiography?)
+</h2>
+A while ago, there was a TCLUGer who got a cheap PC.  This prompted him to
+finally get DSL.  He originally planned to create a firewall using a minimal
+RedHat setup, with a custom 2.2.13 kernel.  Then, a friend mentioned LRP.  He
+checked it out and was immediately hooked by the fact that LRP boots from a
+diskette and runs completely in RAM.  Eventually he learned about Kilimanjaro
+and other dark secrets of the LRP.  Then, he did a presentation for TCLUG.
+<br>
+
+<h2><br>
+A Working Example - Kilimanjaro and ADSL
+</h2>
+
+<img src="lrp_example.gif">
+
+<h3>
+Create the LRP Boot Disk
+</h3>
+<ol>
+<li>Format 1743K diskette:  superformat /dev/fd0 sect=21 cyl=83
+<li>Copy image: dd if=1743-eth_PPP_QoS.floppy of=/dev/fd0 bs=1024
+<li>Add the minicom.lrp package
+<li>Add the lance.o kernel module
+</ol>
+
+<h3>
+Configure the Cisco 675 ADSL Router
+</h3>
+<ol>
+<li>Configure minicom: Serial device /dev/ttyS0, Bps/Par/Bits 38400 8N1,
+Hardware Flow Control = No, Init string = (blank), Reset string = (blank),
+Save setup as dfl
+<li>Clear the router configuration
+<pre>
+        log in
+        cbos>en
+        Password: [hit enter]
+        cbos#set nvram erase
+        cbos#write
+        cbos#reboot
+</pre>
+<li>Set router configuration for ppp
+<pre>
+        log in
+        cbos>en
+        Password: [hit enter]
+        cbos#set interface eth0 address 10.0.0.254
+        cbos#set nat enabled
+        cbos#set ppp wan0-0 ipcp 0.0.0.0
+        cbos#set ppp wan0-0 login mylogin
+        cbos#set ppp wan0-0 password mypassword
+        cbos#set ppp restart enabled
+        cbos#set password exec mypassword
+        cbos#set rip disabled
+        cbos#set web disabled
+        cbos#set telnet disabled
+        cbos#write
+        cbos#reboot
+</pre>
+<li>Use ping, show &amp; traceroute to verify configuration
+</ol>
+
+<h3>
+Configure /etc/network.conf
+</h3>
+<ol>
+<li>Edit <a href="network.conf">/etc/network.conf</a>
+<li>Use ping, traceroute, tcpdump, etc. to verify configuration
+<li>Set default route for machines on internal network: route add default gw 192.168.1.254
+</ol>
+
+<h2><br>
+Firewall 101
+</h2>
+Packet filtering firewall provides protection against low level networking
+attacks but not against application level attacks (e.g. sendmail, quake,
+NFS!!!, ...)
+<br>
+
+<h2><br>
+Terminology to Know
+</h2>
+packet filtering
+<br>
+IP masquerading
+<br>
+port forwarding
+<br>
+
+<h2><br>
+Links
+</h2>
+
+<h3>
+Linux Router Project
+</h3>
+Current Information: <a href="http://lrp.c0wz.com/">http://lrp.c0wz.com/</a>
+<br>
+Cablemodem/DSL HOWTO: <a href="http://www.geocities.com/Athens/Ithaca/9660/lrphowto.html">http://www.geocities.com/Athens/Ithaca/9660/lrphowto.html</a>
+<br>
+BYTE Articles: <a href="http://www.byte.com/column/BYT19990804S0008">PPP Dial on Demand</a>, <a href="http://www.byte.com/column/BYT19991005S0009">Adding DHCP, 100BaseT</a>
+<br>
+Home Page: <a href="http://www.linuxrouter.org/">http://www.linuxrouter.org/</a>
+<br>
+Modmaker: <a href="http://www.linuxrouter.org/modmaker/">http://www.linuxrouter.org/modmaker/</a>
+<br>
+
+<h3>
+Kilimanjaro
+</h3>
+Announcement: <a href="http://www.linuxrouter.org/listarch/linux-router/1999-09-01/msg00018.html">http://www.linuxrouter.org/listarch/linux-router/1999-09-01/msg00018.html</a>
+<br>
+Security Notice: <a href="http://www.linuxrouter.org/pipermail/linux-router/1999-09-01/msg00172.html">http://www.linuxrouter.org/pipermail/linux-router/1999-09-01/msg00172.html</a>
+<br>
+Download Site: <a href="http://lrp.plain.co.nz/">http://lrp.plain.co.nz/</a>
+<br>
+Download Site: <a href="ftp://ftphost.manawatu.gen.nz/pub/linux/linux-router/">ftp://ftphost.manawatu.gen.nz/pub/linux/linux-router/</a>
+<br>
+USA Download Site: <a href="http://ns.cablebg.net/pub/mirror/linux-router-2.2/">http://ns.cablebg.net/pub/mirror/linux-router-2.2/</a>
+<br>
+
+<h3>
+Diskette Tools
+</h3>
+superformat (fdutils): <a href="ftp://www.tux.org/pub/knaff/fdutils/">ftp://www.tux.org/pub/knaff/fdutils/</a>
+<br>
+mkdosfs: <a href="ftp://sunsite.unc.edu/pub/Linux/distributions/linux-router/utils/">ftp://sunsite.unc.edu/pub/Linux/distributions/linux-router/utils/</a>
+<br>
+syslinux: <a href="ftp://sunsite.unc.edu/pub/Linux/distributions/linux-router/utils/">ftp://sunsite.unc.edu/pub/Linux/distributions/linux-router/utils/</a>
+<br>
+
+<h3>
+Linux Firewall & IP Masquerade
+</h3>
+Firewall HOWTO: <a href="http://www.linuxdoc.org/HOWTO/Firewall-HOWTO.html">http://www.linuxdoc.org/HOWTO/Firewall-HOWTO.html</a>
+<br>
+IPCHAINS HOWTO: <a href="http://www.linuxdoc.org/HOWTO/IPCHAINS-HOWTO.html">http://www.linuxdoc.org/HOWTO/IPCHAINS-HOWTO.html</a>
+<br>
+-NEW- IP Masquerade HOWTO: <a href="http://www.linuxdoc.org/HOWTO/IP-Masquerade-HOWTO.html">http://www.linuxdoc.org/HOWTO/IP-Masquerade-HOWTO.html</a>
+<br>
+Linux IP Masquerade Resource:  <a href="http://ipmasq.cjb.net/">http://ipmasq.cjb.net/</a>
+<br>
+
+<h3>
+Security
+</h3>
+rootshell.com: <a href="http://www.rootshell.com/">http://www.rootshell.com/</a>
+<br>
+TrinityOS: <a href="http://www.ecst.csuchico.edu/~dranch/LINUX/TrinityOS.wri">http://www.ecst.csuchico.edu/~dranch/LINUX/TrinityOS.wri</a>
+<br>
+<h3>
+
+Security Tools
+</h3>
+Nmap: <a href="http://www.insecure.org/nmap/">http://www.insecure.org/nmap/</a>
+<br>
+SAINT: <a href="http://www.wwdsi.com/saint/">http://www.wwdsi.com/saint/</a>
+<br>
+L0phtCrack: <a href="http://www.l0pht.com/">http://www.l0pht.com/</a>
+<br>
+
+</body>
