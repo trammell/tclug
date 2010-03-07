@@ -55,11 +55,6 @@ leftmargin="0">
 </UL>
 <P>
 
-<H4>Mankato Area Unix Group (MAUG)</H4>
-<UL>
-<LI>Web site: <A HREF="http://maug.wireless.mnsu.edu/">http://maug.wireless.mnsu.edu/</A>
-</UL>
-
 <H4>Duluth Superior Linux UNIX Users Group (DSLUUG)</H4>
 <UL>
 <LI>Web site: <A HREF="http://www.dsluug.org/">http://www.dsluug.org/</A>
