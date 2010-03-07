@@ -1,39 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-        <title>TCLUG - Twin Cities Linux Users Group</title>
-<meta http-equiv="author" content="TCLUG Webmaster">
-<meta http-equiv="Reply-to" content="webmaster@mn-linux.org">
-<meta http-equiv="Keywords" content="Twin Cities Linux Users Group, Linux, Minnesota,
-Advocacy, Linux Resources, Linux Links, Mailing List, Local Events">
-<meta http-equiv="Description" content="The Twin Cities Linux User's Group is a 
-local Linux advocacy group dedicated to expanding the use of Linux, both
-professionally and personally.  The group is comprised entirely of 
-volunteers.">
-<style>
-body, center, form, hr, p, td, th { font-family: Helvetica,Verdana,Sans-Serif;  
-                     color: #000000;}
-
-.header {       font-family: Helvetica,Verdana,sans-serif;      
-                        font-weight: bold; 
-                        color: #000080;}
-
-.copy  {        font-family: Helvetica,Verdana,sans-serif;  
-                        color: #999999;}
-</style>
-</head>
-
-<body bgcolor=white background="/img/mn-linux_bg.gif" marginwidth="0" marginheight="0" topmargin="0" 
-leftmargin="0">
+<?
+$title="TCLUG - Twin Cities Linux Users Group";
+include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
+?>
 <table border="0" cellpadding="0" cellspacing="0" width="751">
 <tr>
-        <td><img src="/images/tclugminn.jpg" width=500 height=150 border=0 alt=""></td>
+        <td><img src="/images/tclugminn.jpg" width=500 height=150 border=0 alt="Twin Cities Linux Users Group - Minneapolis, Minnesota"></td>
 </tr>
 </table>
-<table border="0" cellpadding="5" cellspacing="0" width="751">
-<tr>
-        <td width="600">
-<table width=600 border="0" align="center" cellspacing="0" cellpadding="1">
+<table border="0" cellpadding="5" cellspacing="0" width="95%">
+<tr valign=top>
+        <td width="95%">
+<table width=95% border="0" align="center" cellspacing="0" cellpadding="1">
 <tr>
   <td bgcolor="#000000" align="center">
 <table width=100% cellspacing=0 cellpadding=20 border=0 bgcolor="ivory">
@@ -41,8 +18,24 @@ leftmargin="0">
       <td align="left"><div class="header" align="center">
 <font size=+2>Upcoming Events</font></div>
 <P>
-<? include("events.inc") ?>
+<?
+include ("../../include/wwwmnlinuxorg.inc");
+tclug_db_connect () or exit;
 
+$sql = "SELECT *,UNIX_TIMESTAMP(date) from events where date >= now() order by date";
+$result = mysql_query($sql) or die ("Cannot execute query");
+$numrows = mysql_numrows($result);
+
+print "<UL>";
+while ($row=mysql_fetch_array($result)) {
+                $stringdate = date("l, F d, Y",$row[4]);
+                print "<LI><B>$stringdate $row[eventtime]</B>\n";
+                print "<blockquote>";
+		print "$row[eventinfo]\n";
+		print "</blockquote>";
+}
+print "</UL>";
+?>
 
 </td>
 </tr>
