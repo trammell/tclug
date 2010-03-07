@@ -1,6 +1,6 @@
-<?
+<?php
 $title="TCLUG - Twin Cities Linux Users Group";
-include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
+include "../header.inc";
 ?>
 <table border="0" cellpadding="0" cellspacing="0" width="751">
 <tr>
@@ -18,32 +18,13 @@ include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
       <td align="left"><div class="header" align="center">
 <font size=+2>Upcoming Events</font></div>
 <P>
-<?
-include ("../../include/wwwmnlinuxorg.inc");
-tclug_db_connect () or exit;
-
-$sql = "SELECT *,UNIX_TIMESTAMP(date) from events where date >= now() order by date";
-$result = mysql_query($sql) or die ("Cannot execute query");
-$numrows = mysql_numrows($result);
-
-print "<UL>";
-while ($row=mysql_fetch_array($result)) {
-                $stringdate = date("l, F d, Y",$row[4]);
-                print "<LI><B>$stringdate $row[eventtime]</B>\n";
-                print "<blockquote>";
-		print "$row[eventinfo]\n";
-		print "</blockquote>";
-}
-print "</UL>";
-?>
-
 </td>
 </tr>
 </table></td>
 </tr>
 </table>
 
-<? include("../footer.inc") ?>
+<?php include "../footer.inc"  ?>
 
 
 </td>
@@ -51,10 +32,10 @@ print "</UL>";
 <table border="0" cellpadding="0" cellspacing="0" width="140">
 <tr>
         <td align="right"><br>
-<? include("../links.inc") ?>
+<?php include "../links.inc"  ?>
 </td>
 </tr>
-</table>        
+</table>
 </td>
 </tr>
 </table>
