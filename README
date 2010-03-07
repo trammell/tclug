@@ -1,0 +1,18 @@
+This is the source code for the Twin Cities Linux User Group (TCLUG),
+hosted at http://www.mn-linux.org/ and http://www.tclug.org/.
+
+the plan
+========
+1. decruft quickly
+2. get all non-cruft into github
+3. make the repo available for cloning & patching
+4. fix obviously broken things
+5. update the live site
+6. make longer-term plans (w/ community involvement?)
+
+possible features to implement
+------------------------------
+* RSS feed aggregator
+* no RSS source until we have a reliable contributor
+* portal / CMS (Drupal?)
+
