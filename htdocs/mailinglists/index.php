@@ -6,25 +6,25 @@
 <meta http-equiv="Reply-to" content="webmaster@mn-linux.org">
 <meta http-equiv="Keywords" content="Twin Cities Linux Users Group, Linux, Minnesota,
 Advocacy, Linux Resources, Linux Links, Mailing List, Local Events">
-<meta http-equiv="Description" content="The Twin Cities Linux User's Group is a 
+<meta http-equiv="Description" content="The Twin Cities Linux User's Group is a
 local Linux advocacy group dedicated to expanding the use of Linux, both
-professionally and personally.  The group is comprised entirely of 
+professionally and personally.  The group is comprised entirely of
 volunteers.">
 <style>
-body, center, form, hr, p, td, th { font-family: Helvetica,Verdana,Sans-Serif;  
+body, center, form, hr, p, td, th { font-family: Helvetica,Verdana,Sans-Serif;
                      color: #000000;}
 
-.header {       font-family: Helvetica,Verdana,sans-serif;      
-                        font-weight: bold; 
+.header {       font-family: Helvetica,Verdana,sans-serif;
+                        font-weight: bold;
                         color: #000080;}
 
-.copy  {        font-family: Helvetica,Verdana,sans-serif;  
+.copy  {        font-family: Helvetica,Verdana,sans-serif;
                         color: #999999;}
 </style>
 <link REL="SHORTCUT ICON" HREF="/images/tclug.ico" >
 </head>
 
-<body bgcolor=white background="/img/mn-linux_bg.gif" marginwidth="0" marginheight="0" topmargin="0" 
+<body bgcolor=white background="/img/mn-linux_bg.gif" marginwidth="0" marginheight="0" topmargin="0"
 leftmargin="0">
 <table border="0" cellpadding="0" cellspacing="0" width="751">
 <tr>
@@ -96,10 +96,10 @@ Etiquette FAQ</A>
 </table>
 <CENTER>
 <P class="copy"><font size=-1>
-Please direct all questions, comments, and insults to <a 
+Please direct all questions, comments, and insults to <a
 href="mailto:webmaster@mn-linux.org">webmaster@mn-linux.org</a>,<BR>
 or use the <a href="/feedback.php">Feedback form</a>.<BR>
-Hosting generously provided by <a href="http://www.real-time.com">Real-Time 
+Hosting generously provided by <a href="http://www.real-time.com">Real-Time
 Enterprises</a>.
 </CENTER>
 </td>
@@ -107,10 +107,10 @@ Enterprises</a>.
 <table border="0" cellpadding="0" cellspacing="0" width="140">
 <tr>
         <td align="right"><br>
-<? include("../links.inc") ?>
+<?php include("../links.inc") ?>
 </td>
 </tr>
-</table>        
+</table>
 </td>
 </tr>
 </table>
