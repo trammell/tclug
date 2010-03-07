@@ -41,10 +41,7 @@ leftmargin="0">
 <tr>
       <td align="left"><div class="header" align="center">
 <font size=+2>Other Minnesota LUGS</font></div>
-<H4>St. Cloud Area Linux Users Group</H4>
-<UL>
-<LI>Web site: <A HREF="http://scalug.mn-linux.org/">http://scalug.mn-linux.org/</A>
-</UL>
+
 <P>
 <H4>The Northfield Minnesota Linux Users Group (NORLUG)</H4>
 <UL>
