@@ -1,9 +1,7 @@
-<?
+<?php
 $title="TCLUG - Twin Cities Linux Users Group Meetings";
-include("/usr/httpd/virtual/www.mn-linux.org/html/header.inc");
+include("../header.inc");
 ?>
-
-
 
 <table border="0" cellpadding="0" cellspacing="0" width="751">
 <tr>
@@ -34,35 +32,35 @@ We also have bi-weekly beer meetings at various locations in the Twin Cities are
 <P>
 <B>When:
 <BR></B>
-<?print $date ?>
+<?php print $date ?>
 <P>
 <B>Topic:
 <BR></B>
-<?print $topic ?>
+<?php print $topic ?>
 <P>
 <B>Where:</B>
 <BR>
-<? print $location ?>
+<?php print $location ?>
 <P>
 Hope to see you there!
 <P>
-<? include("pastmeetings.inc") ?>
+<?php include("pastmeetings.inc") ?>
 
 </td>
 </tr>
 </table></td>
 </tr>
 </table>
-<? include("../footer.inc") ?>
+<?php include("../footer.inc") ?>
 </td>
         <td width="151" align="right" valign="top">
 <table border="0" cellpadding="0" cellspacing="0" width="140">
 <tr>
         <td align="right"><br>
-<? include("../links.inc") ?>
+<?php include("../links.inc") ?>
 </td>
 </tr>
-</table>        
+</table>
 </td>
 </tr>
 </table>
