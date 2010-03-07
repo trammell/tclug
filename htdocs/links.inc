@@ -29,9 +29,11 @@
 <a href="ftp://ftp.mn-linux.org/linux/">Downloads</a><BR>
 </TD></TR><TR><TD align=right>
 <a href="http://www.cafeshops.com/tclug">TCLUG Store</a><BR>
-</TD></TR><TR><TD align=right>
-<a href="/search/">Search</a><BR>
-</TD></TR><TR><TD align=right>
+</TD></TR>
+<!--
+<TR><TD align=right><a href="/search/">Search</a><BR> </TD></TR>
+-->
+<TR><TD align=right>
 <BR>
 
 <P>
